@@ -9,5 +9,6 @@ return [
     'langList' => [
         'en' => 'English',
         'ru' => 'Русский',
+        'uk' => 'Українська',
     ]
 ];

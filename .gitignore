@@ -5,3 +5,4 @@ Homestead.yaml
 .env
 /node_modules
 /public/js
+/public/mix-manifest.json
