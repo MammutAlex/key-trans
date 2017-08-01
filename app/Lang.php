@@ -20,7 +20,7 @@ class Lang
         return static::$$lang;
     }
 
-    public static $list = ['ru', 'en', 'uk'];
+    public static $list = ['ru', 'en', 'uk','it'];
 
     private static $ru = [
         "й",
@@ -56,6 +56,40 @@ class Lang
         "б",
         "ю"
     ];
+    private static $it = [
+        "q",
+        "w",
+        "e",
+        "r",
+        "t",
+        "y",
+        "u",
+        "i",
+        "o",
+        "p",
+        "è",
+        "+",
+        "a",
+        "s",
+        "d",
+        "f",
+        "g",
+        "h",
+        "j",
+        "k",
+        "l",
+        "ò",
+        "à",
+        "z",
+        "x",
+        "c",
+        "v",
+        "b",
+        "n",
+        "m",
+        ",",
+        "."
+    ];
     private static $uk = [
         "й",
         "ц",
@@ -79,7 +113,7 @@ class Lang
         "л",
         "д",
         "ж",
-        "э",
+        "є",
         "я",
         "ч",
         "с",
