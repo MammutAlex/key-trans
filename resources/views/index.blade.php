@@ -21,7 +21,9 @@
             <div class="box">
                 <div class="columns">
                     <div class="column is-6">
-                        <div class="select is-medium" :class="form.errors.has('from')?'is-danger':''">
+                        <div class="select is-medium"
+                             :class="form.errors.has('from')?'is-danger':''"
+                             v-on:click="form.errors.clear()">
                             <select v-model="form.from">
                                 <option disabled value="">Выберите язык с которого хотите перевести</option>
                                 @foreach(trans('web.langList') as $key=>$lang)
@@ -31,7 +33,9 @@
                         </div>
                     </div>
                     <div class="column is-6">
-                        <div class="select is-medium" :class="form.errors.has('to')?'is-danger':''">
+                        <div class="select is-medium"
+                             :class="form.errors.has('to')?'is-danger':''"
+                             v-on:click="form.errors.clear()">
                             <select v-model="form.to">
                                 <option disabled value="">Выберите язык на которий хотите перевести</option>
                                 @foreach(trans('web.langList') as $key=>$lang)
@@ -45,6 +49,7 @@
                     <div class="column is-6">
                     <textarea class="textarea"
                               :class="form.errors.has('text')?'is-danger':''"
+                              v-on:click="form.errors.clear()"
                               v-model="form.text"
                               placeholder="Введите сюда текст который вы хотите перевести"
                               rows="10">
