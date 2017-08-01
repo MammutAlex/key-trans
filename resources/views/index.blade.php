@@ -46,7 +46,7 @@
                     <textarea class="textarea"
                               :class="form.errors.has('text')?'is-danger':''"
                               v-model="form.text"
-                              placeholder="10 lines of textarea"
+                              placeholder="Введите сюда текст который вы хотите перевести"
                               rows="10">
                     </textarea>
                     </div>
