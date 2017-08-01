@@ -11,4 +11,7 @@ const {mix} = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/web.js', 'public/js');
+mix.js('resources/assets/js/web.js', 'public/js')
+    .scripts([
+        'resources/assets/js/vanilla/menu.js'
+    ], 'public/js/all.js');
