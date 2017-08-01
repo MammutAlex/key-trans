@@ -13,7 +13,7 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-6">
-                    <div class="select is-medium">
+                    <div class="select is-medium" :class="form.errors.has('from')?'is-danger':''">
                         <select v-model="form.from">
                             <option disabled value="">Select from language</option>
                             @foreach(trans('web.langList') as $key=>$lang)
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="column is-6">
-                    <div class="select is-medium">
+                    <div class="select is-medium" :class="form.errors.has('to')?'is-danger':''">
                         <select v-model="form.to">
                             <option disabled value="">Select to language</option>
                             @foreach(trans('web.langList') as $key=>$lang)
@@ -35,7 +35,12 @@
             </div>
             <div class="columns">
                 <div class="column is-6">
-                    <textarea class="textarea"  v-model="form.text" placeholder="10 lines of textarea" rows="10"></textarea>
+                    <textarea class="textarea"
+                              :class="form.errors.has('text')?'is-danger':''"
+                              v-model="form.text"
+                              placeholder="10 lines of textarea"
+                              rows="10">
+                    </textarea>
                 </div>
                 <div class="column is-6">
                     <div class="box" v-text="text"></div>
