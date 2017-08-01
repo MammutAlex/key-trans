@@ -11,9 +11,8 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
-});
+$app->get('/', 'WebController@index');
+
 $app->group(['prefix' => 'api/v1'], function () use ($app) {
     $app->post('translate', 'ApiController@translate');
 });
