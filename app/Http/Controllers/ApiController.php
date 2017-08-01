@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 use App\Http\ApiResponse;
 use App\Lang;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class ApiController extends Controller
 {
@@ -19,9 +20,20 @@ class ApiController extends Controller
     public function translate(Request $request)
     {
         $this->validate($request, [
-            'from' => ['required', 'string'],
-            'to' => ['required', 'string'],
-            'text' => ['required', 'string'],
+            'from' => [
+                'required',
+                'string',
+                Rule::in(Lang::$list),
+            ],
+            'to' => [
+                'required',
+                'string',
+                Rule::in(Lang::$list),
+            ],
+            'text' => [
+                'required',
+                'string'
+            ],
         ]);
 
         $text = str_replace(Lang::get($request['from']), Lang::get($request['to']), $request->text);

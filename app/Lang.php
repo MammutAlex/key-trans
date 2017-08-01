@@ -20,6 +20,8 @@ class Lang
         return static::$$lang;
     }
 
+    public static $list = ['ru', 'en'];
+
     private static $ru = [
         "й",
         "ц",
