@@ -12,5 +12,6 @@ return [
         'uk' => 'Українська',
         'it' => 'Italian',
         'de' => 'German',
+        'pt' => 'Portuguese',
     ]
 ];
