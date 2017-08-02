@@ -6,10 +6,11 @@
     <section class="hero is-primary">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h1 class="is-1 title">KeyTranspire</h1>
+                <h1 class="is-1 title">
+                    KeyTranspire
+                </h1>
                 <h2 class="subtitle is-3">
-                    Здесь вы сможете перевести текст если забыли поменять раскладку клавиатуры. Просто выберите из
-                    которой раскладки и на какую вы хотите исправить текст и нажмите кнопку перевести
+                    Здесь вы сможете перевести текст если забыли поменять раскладку клавиатуры.
                 </h2>
             </div>
         </div>
@@ -25,7 +26,7 @@
                              :class="form.errors.has('from')?'is-danger':''"
                              v-on:click="form.errors.clear()">
                             <select v-model="form.from" v-on:change="translateAuto()">
-                                <option disabled value="">Выберите язык с которого хотите перевести</option>
+                                <option disabled value="">Язык с которого хотите перевести</option>
                                 @foreach(trans('web.langList') as $key=>$lang)
                                     <option value="{{$key}}">{{$lang}}</option>
                                 @endforeach
@@ -37,7 +38,7 @@
                              :class="form.errors.has('to')?'is-danger':''"
                              v-on:click="form.errors.clear()">
                             <select v-model="form.to" v-on:change="translateAuto()">
-                                <option disabled value="">Выберите язык на которий хотите перевести</option>
+                                <option disabled value="">Язык на которий хотите перевести</option>
                                 @foreach(trans('web.langList') as $key=>$lang)
                                     <option value="{{$key}}">{{$lang}}</option>
                                 @endforeach

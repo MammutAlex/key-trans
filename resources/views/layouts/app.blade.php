@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Перевод клавиатуры - @yield('title')</title>
+    <title>Сервис по переводу текста в другую раскладку- @yield('title')</title>
+    <meta name="keywords" content="смена раскладки, перевод раскладки, перевод в другую раскладку, другая раскладка, с английской раскладки на русскую, с русской раскладки на английскую, переводчик раскладки, online, онлайн, перевод с другой раскладки, перевод из одной раскладки в другую, другая раскладка, раскладка клавиатуры, fyukbqcrfz hfcrkflrf, heccrfz hfcrkflrf, j,hfnysq gthtdjlxbr hfcrkflrb, обратный переводчик раскладки">
+    <meta name="description" content="Онлайн сервис по смене раскладки и переводу текста в другую раскладку клавиатуры, например при наборе русского текста в английской раскладке, или английского текста в русской.">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.0/css/bulma.min.css">
 </head>
