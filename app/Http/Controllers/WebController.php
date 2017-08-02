@@ -14,4 +14,12 @@ class WebController extends Controller
     {
         return view('index');
     }
+
+    public function lang($locale)
+    {
+        if (array_key_exists($locale, trans('web.localeList'))) {
+            app('translator')->setLocale($locale);
+        }
+        return view('index');
+    }
 }
