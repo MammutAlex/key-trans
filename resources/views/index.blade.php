@@ -24,7 +24,7 @@
                         <div class="select is-medium"
                              :class="form.errors.has('from')?'is-danger':''"
                              v-on:click="form.errors.clear()">
-                            <select v-model="form.from">
+                            <select v-model="form.from" v-on:change="translateAuto()">
                                 <option disabled value="">Выберите язык с которого хотите перевести</option>
                                 @foreach(trans('web.langList') as $key=>$lang)
                                     <option value="{{$key}}">{{$lang}}</option>
@@ -36,7 +36,7 @@
                         <div class="select is-medium"
                              :class="form.errors.has('to')?'is-danger':''"
                              v-on:click="form.errors.clear()">
-                            <select v-model="form.to">
+                            <select v-model="form.to" v-on:change="translateAuto()">
                                 <option disabled value="">Выберите язык на которий хотите перевести</option>
                                 @foreach(trans('web.langList') as $key=>$lang)
                                     <option value="{{$key}}">{{$lang}}</option>
@@ -50,6 +50,7 @@
                     <textarea class="textarea"
                               :class="form.errors.has('text')?'is-danger':''"
                               v-on:click="form.errors.clear()"
+                              v-on:input="translateAuto()"
                               v-model="form.text"
                               placeholder="Введите сюда текст который вы хотите перевести"
                               rows="10">
@@ -61,7 +62,7 @@
                 </div>
                 <div class="columns">
                     <div class="column is-12">
-                        <a class="button is-medium" v-on:click="translite()">Перевести</a>
+                        <a class="button is-medium" v-on:click="translate()">Перевести</a>
                     </div>
                 </div>
             </div>
