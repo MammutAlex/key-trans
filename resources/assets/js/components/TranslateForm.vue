@@ -10,12 +10,6 @@
                 text: ''
             }
         },
-        watch: {
-            form() {
-                console.log('hello1');
-                this.translateAuto();
-            }
-        },
         methods: {
             translate() {
                 this.form.post('/api/v1/translate')
@@ -24,7 +18,6 @@
                     });
             },
             translateAuto() {
-                console.log('hello');
                 if (this.form.from !== '' && this.form.to !== '' && this.form.text !== '') {
                     this.form.post('/api/v1/translate')
                         .then(response => {
