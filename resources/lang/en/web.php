@@ -13,6 +13,7 @@ return [
         'it' => 'Italian',
         'de' => 'German',
         'pt' => 'Portuguese',
+        'es' => 'Spanish',
     ],
     'localeList' => [
         'en' => 'English',
