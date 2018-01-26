@@ -11,9 +11,9 @@
 |
 */
 
-$app->get('/', 'WebController@index');
-$app->get('/{lang}', 'WebController@lang');
+$router->get('/', 'WebController@index');
+$router->get('/{lang}', 'WebController@lang');
 
-$app->group(['prefix' => 'api/v1'], function () use ($app) {
-    $app->post('translate', 'ApiController@translate');
+$router->group(['prefix' => 'api/v1'], function () use ($router) {
+    $router->post('translate', 'ApiController@translate');
 });

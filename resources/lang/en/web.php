@@ -28,7 +28,7 @@ return [
         'locale' => 'Lang'
     ],
     'hero' => [
-        'title' => 'KeyTranspire',
+        'title' => 'KeyTranslate',
         'text' => 'Here you can translate text if you forgot to change the keyboard layout.',
     ],
     'trans'=>[

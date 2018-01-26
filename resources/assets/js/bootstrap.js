@@ -1,5 +1,4 @@
 window._ = require('lodash');
-
 import Vue from 'vue';
 import Form from './core/Form';
 
