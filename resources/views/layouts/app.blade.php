@@ -79,6 +79,6 @@
         </div>
     </div>
 </footer>
-<script src="/js/web.js"></script>
+<script src="/js/web.js" async></script>
 </body>
 </html>
